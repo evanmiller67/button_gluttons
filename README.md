@@ -20,7 +20,7 @@ After you're registered, scan someone else's QR button and battle them!
 - Count for 2 buttons
 - Have scarce buttons 
 
-## ZOMG [Leaderboard](http://bg.cafepress.com)
+## ZOMG [Leaderboard](http://buttongluttons.heroku.com)
 ## WTF [Twitter feed](http://www.twitter.com/buttongluttons)
   
 Everyone gets QR code on ID/lanyard with 5 buttons & HP (swag bag when entering)
