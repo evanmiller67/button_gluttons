@@ -4,7 +4,7 @@ You're automatically entered to win just by registering.
 Your buttons are actually raffle tickets for the drawing.
 
 ## How do I join this madness?
-Come to the CafePress booth to get a QR code you can use to register. Also you get buttons, [yay](http://alltheragefaces.com/img/faces/png/happy-epic-win.png)!
+Come to the CafePress booth to get a QR code you can use to register - this is specific to you. Also you get buttons, [yay](http://alltheragefaces.com/img/faces/png/happy-epic-win.png)!
 We'll take your name and email address and not spam you, just send game updates. You can sign up for the CafePress newsletter if you want.
 
 ## Gameplay
@@ -23,14 +23,10 @@ After you're registered, scan someone else's QR button and battle them!
 ## ZOMG [Leaderboard](http://buttongluttons.heroku.com)
 ## WTF [Twitter feed](http://www.twitter.com/buttongluttons)
   
-Everyone gets QR code on ID/lanyard with 5 buttons & HP (swag bag when entering)
-
-REGISTER - Scan the unique QR code, takes you to a page to register
+REGISTER - Scan the unique QR code, a page to register just for you
 	- Name, email, CP newsletter (unchecked by default)
 	- QR code has a special 5 alpha-numeric code that is yours (on button/merch)
 	- Your registered code is saved in cookie/session when you register
-	- Automatically get 1 raffle entry
-	- Remaining buttons at end turn into raffle entries
 
 walk around, battle people (scan their QR code)
 both players must acknowledge that you're playing
