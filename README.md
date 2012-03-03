@@ -1,7 +1,12 @@
-NAME: ButtonGluttons
+# What is ButtonGluttons?
+ButtonGluttons is a demo Code PaLOUsa app to increase your chances of winning a grand prize given away by [CafePress.com](http://www.cafepress.com).
 
-leaderboard
-twitter feed
+## How do I join this madness?
+Every
+
+## ZOMG Leaderboard
+## WTF [Twitter feed](http://www.twitter.com/buttongluttons)
+  
 
 Everyone gets QR code on ID/lanyard with 5 buttons & HP (swag bag when entering)
 
@@ -51,6 +56,7 @@ Badge Ideas
 	8-bit heart
 	rage faces
 	ceiling cat
+	RickRoll'd
 
 
 
@@ -65,3 +71,4 @@ Maybe just a few things out of each category of merchandise to display what we a
 
 We just released photo-on-metal; any chance of something that we can hang up in the booth and bring back for the office?
 	photo on metal sounds bad-ass. def, but do it soon, not sure what turn around time is. 
+	
