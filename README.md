@@ -1,13 +1,28 @@
 # What is ButtonGluttons?
-ButtonGluttons is a demo Code PaLOUsa app to increase your chances of winning a grand prize given away by [CafePress.com](http://www.cafepress.com).
+ButtonGluttons is a demo Code PaLOUsa app to increase your chances of winning a grand prize drawing given away by [CafePress.com](http://www.cafepress.com). 
+You're automatically entered to win just by registering.
+Your buttons are actually raffle tickets for the drawing.
 
 ## How do I join this madness?
-Every
+Come to the CafePress booth to get a QR code you can use to register. Also you get buttons, [yay](http://alltheragefaces.com/img/faces/png/happy-epic-win.png)!
+We'll take your name and email address and not spam you, just send game updates. You can sign up for the CafePress newsletter if you want.
 
-## ZOMG Leaderboard
+## Gameplay
+After you're registered, scan someone else's QR button and battle them!
+
+- You may roll for a weapon 3 times
+- Only your most current roll counts
+- Whoever has the better weapon, wins
+- Take one of their buttons to shame them and show your button gluttony
+- Play until you have no more badges
+
+## Bosses - CafePress employees
+- Count for 2 buttons
+- Have scarce buttons 
+
+## ZOMG [Leaderboard](http://bg.cafepress.com)
 ## WTF [Twitter feed](http://www.twitter.com/buttongluttons)
   
-
 Everyone gets QR code on ID/lanyard with 5 buttons & HP (swag bag when entering)
 
 REGISTER - Scan the unique QR code, takes you to a page to register
@@ -15,27 +30,22 @@ REGISTER - Scan the unique QR code, takes you to a page to register
 	- QR code has a special 5 alpha-numeric code that is yours (on button/merch)
 	- Your registered code is saved in cookie/session when you register
 	- Automatically get 1 raffle entry
-	- Remaining HP at end turn into raffle entries
+	- Remaining buttons at end turn into raffle entries
 
 walk around, battle people (scan their QR code)
 both players must acknowledge that you're playing
 Randomly select 1 of 20 weapons (show weapon and # rolled)
 Larger weapon takes 1 HP from other person
 if you win, you choose which (1) button to take from other person
-play until you have no more HP
-try to play without HP, you get the jurassic park "you didn't say the magic word"
+play until you have no more buttons
+try to play without buttons, you get the jurassic park "you didn't say the magic word"
 	http://www.youtube.com/watch?v=RfiQYRn7fBg
 
 announce winner @ marc's keynote
-winner has the top HP at the end
-convert HP to raffle entries & select winner
+winner has the most buttons at the end
+convert buttonsf to raffle entries & select winner
 
 BOSSES - CP employees have unlimited life
-	- scarce buttons 
-	- can't roll less than 5
-	- codenames (on back of shirt w/badge)
-	- QR code on front w/CP design
-	- count for 2 HPs
 
 Achievements
 	- beat CP employee (big button)
