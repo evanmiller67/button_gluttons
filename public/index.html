@@ -48,10 +48,6 @@
         width: 175px;
       }
 
-      #footer {
-        clear: both;
-      }
-
       #header, #about, #getting-started {
         padding-left: 25px;
         padding-right: 30px;
@@ -178,80 +174,131 @@
       .filename {
         font-style: italic;
       }
+      
+      * {
+      	margin: 0;
+      }
+      html, body {
+      	height: 100%;
+      }
+      .wrapper {
+      	min-height: 100%;
+      	height: auto !important;
+      	height: 100%;
+      	margin: 0 auto -24px; /* the bottom margin is the negative value of the footer's height */
+      }
+      .footer, .push {
+      	height: 24px; /* .push must be the same height as .footer */
+      }
+      
+      .footer {
+        width: 200px;
+        clear: both;
+        text-align: right;
+      	padding-top: 20px;
+        margin-left: auto;
+        margin-right: 0px;
+      }
+      
+      .footer-rule {
+        background-color: #CCC;
+        border: none;
+        height: 1px;
+      }
+      .footer-wrapper {
+        padding-top: 5px;
+      }
+      .footer-text {
+        padding-right: 5px;
+        color: #BBB;
+        font-size: 10px;
+        font-style: italic;
+      }
     </style>
     <script type="text/javascript">
     </script>
   </head>
   <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Is this real life?</h3>
-            <ul class="links">
-              <li><a href="leaderboard">ZOMG LEADERBOARD!</a></li>
-              <li><a href="http://twitter.com/buttongluttons">WTF Twitter Feed</a></li>
-              <li><a href="rules">Rules</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header-img">
-          <img src="/assets/header.png" />
+    <div id="wrapper">
+      <div id="page">
+        <div id="sidebar">
+          <ul id="sidebar-items">
+            <li>
+              <h3>Is this real life?</h3>
+              <ul class="links">
+                <li><a href="leaderboard">ZOMG LEADERBOARD!</a></li>
+                <li><a href="http://twitter.com/buttongluttons">WTF Twitter Feed</a></li>
+                <li><a href="rules">Rules</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
-        <div id="header">
-          <h1>Welcome to ButtonGluttons</h1>
-        </div>
+        <div id="content">
+          <div id="header-img">
+            <img src="/assets/header.png" />
+          </div>
 
-        <div id="about">
-          <h3>What is ButtonGluttons?</h3>
-          <p>ButtonGluttons is a demo Code PaLOUsa app to increase your chances of winning a grand prize drawing given away by <a href="http://www.cafepress.com">CafePress.com</a>. 
-          You're automatically entered to win just by registering.
-          Your buttons are actually raffle tickets for the drawing.</p>
+          <div id="header">
+            <h1>Welcome to ButtonGluttons</h1>
+          </div>
+
+          <div id="about">
+            <h3>What is ButtonGluttons?</h3>
+            <p>ButtonGluttons is a demo Code PaLOUsa app to increase your chances of winning a grand prize drawing given away by <a href="http://www.cafepress.com">CafePress.com</a>. 
+            You're automatically entered to win just by registering.
+            Your buttons are actually raffle tickets for the drawing.</p>
           
+          </div>
+
+          <div id="getting-started">
+            <h1>TODO:</h1>
+
+            <ol>
+              <li>
+                <h2>Register</h2>
+                <p>All we want is your name and email address. We wont spam you, but will send your game stats.</p>
+              </li>
+
+              <li>
+                <h2>Gameplay</h2>
+                <p>
+                  <ul id="gameplay">
+                    <li>You may roll for a weapon 3 times</li>
+                    <li>Only your most current roll counts</li>
+                    <li>Whoever has the better weapon, wins</li>
+                    <li>Take one of their buttons to shame them and show your button gluttony</li>
+                    <li>Play until you have no more badges</li>
+                    <li>Profit!</li>
+                  </ul>
+                </p>
+              </li>
+
+              <li>
+                <h2>Bosses - CafePress Employees</h2>
+                <p>
+                  <ul id="bosses">
+                    <li>Count for 2 buttons</li>
+                    <li>Have scarce buttons</li>
+                  </ul>
+                </p>
+              </li>
+
+            </ol>
+          </div>
         </div>
 
-        <div id="getting-started">
-          <h1>TODO:</h1>
-
-          <ol>
-            <li>
-              <h2>Register</h2>
-              <p>All we want is your name and email address. We wont spam you, but will send your game stats.</p>
-            </li>
-
-            <li>
-              <h2>Gameplay</h2>
-              <p>
-                <ul id="gameplay">
-                  <li>You may roll for a weapon 3 times</li>
-                  <li>Only your most current roll counts</li>
-                  <li>Whoever has the better weapon, wins</li>
-                  <li>Take one of their buttons to shame them and show your button gluttony</li>
-                  <li>Play until you have no more badges</li>
-                  <li>Profit!</li>
-                </ul>
-              </p>
-            </li>
-
-            <li>
-              <h2>Bosses - CafePress Employees</h2>
-              <p>
-                <ul id="bosses">
-                  <li>Count for 2 buttons</li>
-                  <li>Have scarce buttons</li>
-                </ul>
-              </p>
-            </li>
-
-          </ol>
+      </div>
+      <div class="push"></div>
+    </div>
+    
+    <div class="footer">
+      <hr class="footer-rule" />
+      <div class="footer-wrapper">
+        <div class="footer-text">
+          &copy; 2012 CafePress Inc.
         </div>
       </div>
-
-      <div id="footer">&nbsp;</div>
     </div>
   </body>
 </html>
