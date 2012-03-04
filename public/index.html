@@ -9,6 +9,8 @@
       html, body {
       	height: 100%;
         background-color: #f0f0f0;
+        background-image: url('/assets/header-gradient.png');
+        background-repeat: repeat-x;
         font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
         font-size: 13px;
         color: #333;
@@ -19,9 +21,9 @@
         color: #000;
       }
 
-      a  {color: #03c}
+      a  {color: #5683af}
       a:hover {
-        background-color: #03c;
+        background-color: #5683af;
         color: white;
         text-decoration: none;
       }
@@ -39,7 +41,6 @@
         float: left;
         background-color: white;
         border: 3px solid #aaa;
-        border-top: none;
         padding: 25px;
         width: 500px;
       }
@@ -69,7 +70,6 @@
         font-size: 16px;
       }
 
-
       #about h3 {
         margin: 0;
         margin-bottom: 10px;
@@ -79,54 +79,21 @@
       #about-content {
         background-color: #ffd;
         border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
       }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
+      #about-content p {
+        padding: 2px;
       }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
 
       #getting-started {
         border-top: 1px solid #ccc;
         margin-top: 25px;
         padding-top: 15px;
       }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-        padding-bottom: 15px;
-      }
       #getting-started h2 {
         margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
+        color: #4a4a4a;
+        font-size: 18px;
+        padding-bottom: 15px;
       }
       #getting-started ol {
         margin-left: 0;
@@ -162,7 +129,7 @@
         padding-left: 0;
       }
       #sidebar ul h3 {
-        margin-top: 25px;
+        margin-top: 50px;
         font-size: 16px;
         padding-bottom: 20px;
       }
@@ -208,14 +175,26 @@
         font-size: 10px;
         font-style: italic;
       }
+
+      #banner {
+        float: left;
+        position: absolute;
+        padding-left: 15px;
+      }
+      .banner-push {
+        margin-top: 75px;
+      }
     </style>
     <script type="text/javascript">
     </script>
   </head>
   <body>
     <div class="wrapper">
+      <div id="banner">
+        <img src="http://codepalousa.com/templates/rt_entropy_j15/images/logo/style6/logo2.png" />
+      </div>
       <div id="page">
-        <div id="sidebar">
+        <div id="sidebar" class="banner-push">
           <ul id="sidebar-items">
             <li>
               <h3>Is this real life?</h3>
@@ -228,7 +207,7 @@
           </ul>
         </div>
 
-        <div id="content">
+        <div id="content" class="banner-push">
           <div id="header-img">
             <img src="/assets/header.png" />
           </div>
@@ -239,14 +218,14 @@
 
           <div id="about">
             <h3>What is ButtonGluttons?</h3>
-            <p>ButtonGluttons is a demo Code PaLOUsa app to increase your chances of winning a grand prize drawing given away by <a href="http://www.cafepress.com">CafePress.com</a>. 
-            You're automatically entered to win just by registering.
-            Your buttons are actually raffle tickets for the drawing.</p>
-          
+            <div id="about-content">
+              <p>ButtonGluttons is a demo Code PaLOUsa app to increase your chances of winning a grand prize drawing given away by <a href="http://www.cafepress.com">CafePress.com</a>.</p>
+              <p>You're automatically entered to win just by registering. Your buttons are actually raffle tickets for the drawing.</p>
+            </div>
           </div>
 
           <div id="getting-started">
-            <h1>TODO:</h1>
+            <h2>:TODO:</h2>
 
             <ol>
               <li>
