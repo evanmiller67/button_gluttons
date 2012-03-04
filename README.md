@@ -37,6 +37,32 @@ After you're registered, scan someone else's QR button and battle them!
 
 
 ## Swag to win
+- Buttons
+- Stickers
+- Magnets
+- T-shirts
+- Patches
+- Journals
+- Calendars
+- Shot glasses
+- Water bottles
+- Hats
+- Messenger bags
+- Mugs
+- Coasters
+- Mouse pads
+- CafePress coupon codes (make your own!)
+
+### Badge Ideas
+- Narwhal
+- Bacon
+- Cupcake
+- Nyancat
+- Longcat (set)
+- 8-bit heart
+- Rage faces
+- Ceiling cat
+- RickRoll'd
 
 
 ### The drawing
@@ -44,32 +70,8 @@ Winner is announced the CafePress keynote;
 has the most buttons at the end.
 Buttons are converted to raffle tickets (keep your buttons).
 
-BOSSES - CP employees have unlimited life
+##### Gotchas
+CafePress employees have unlimited life
 
-Possible merch to use?
-
-Badge Ideas
-	narwhal
-	bacon
-	cupcake
-	nyancat
-	longcat (set)
-	8-bit heart
-	rage faces
-	ceiling cat
-	RickRoll'd
-
-
-
-- Will we be able to distributed swag when people get there?
-- Can we hand out coupon codes instead of merchandise?
-yeah, can def hand out sheaf and coupons. I'll show you how to make one-time-use coupons. shwag better tho. 
-
-- What merchandise will we be able to put designs on? (We were thinking t-shirts, shot glasses, journals, buttons, water bottles, hats, messenger bags, patches, mugs, magnets, coasters, mouse pads, stickers, calendars) 
-Maybe just a few things out of each category of merchandise to display what we are capable of printing on. 
-	Merch-any. I wouldn't worry about showcasing, per se, but the more variety def more whimsy. just have to be overt about it being random and playful--I hate when people start coming up and asking for stuff. (happened at sxsw 2 yrs ago)
-
-
-We just released photo-on-metal; any chance of something that we can hang up in the booth and bring back for the office?
-	photo on metal sounds bad-ass. def, but do it soon, not sure what turn around time is. 
-	
+##### Booth setup
+Awesome photo-on-metal design; ideas?
