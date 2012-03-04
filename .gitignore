@@ -38,3 +38,8 @@ Thumbs.db
 # SublimeText project files #
 #############################
 *.sublime*
+
+# Generated QR codes #
+######################
+codes/*.png
+

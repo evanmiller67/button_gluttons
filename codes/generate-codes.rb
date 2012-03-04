@@ -4,6 +4,7 @@ require 'uri'
 
 # Number of QRs to generate
 num_qrs = 500
+qr_size = "500x500"
 
 i = 0
 qr = Hash.new
@@ -20,7 +21,7 @@ end
 
 # Make google generate the QR code
 # escape the URI
-request = "/chart?cht=qr&chs=500x500&chl=" + URI.escape("http://buttongluttons.com/qr/", Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+request = "/chart?cht=qr&chs=#{qr_size}&chl=" + URI.escape("http://buttongluttons.com/qr/", Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
 gapi = "https://chart.googleapis.com"
 uri = URI.parse(gapi)
 
