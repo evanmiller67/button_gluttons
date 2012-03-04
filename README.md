@@ -66,7 +66,7 @@ After you're registered, scan someone else's QR button and battle them!
 
 
 ### The drawing
-Winner is announced the CafePress keynote;
+Winner is announced at the codepaLOUsa CafePress keynote;
 has the most buttons at the end.
 Buttons are converted to raffle tickets (keep your buttons).
 
