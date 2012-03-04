@@ -3,10 +3,11 @@
   <head>
     <title>ButtonGluttons: Gotta collect 'em all</title>
     <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
+      * {
+      	margin: 0;
+      }
+      html, body {
+      	height: 100%;
         background-color: #f0f0f0;
         font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
         font-size: 13px;
@@ -174,12 +175,6 @@
         font-style: italic;
       }
       
-      * {
-      	margin: 0;
-      }
-      html, body {
-      	height: 100%;
-      }
       .wrapper {
       	min-height: 100%;
       	height: auto !important;
@@ -194,7 +189,7 @@
         width: 200px;
         clear: both;
         text-align: right;
-      	padding-top: 20px;
+        padding-top: 12px;
         margin-left: auto;
         margin-right: 0px;
       }
@@ -204,10 +199,8 @@
         border: none;
         height: 1px;
       }
-      .footer-wrapper {
-        padding-top: 5px;
-      }
       .footer-text {
+        padding-top: 5px;
         padding-right: 5px;
         color: #BBB;
         font-size: 10px;
@@ -218,7 +211,7 @@
     </script>
   </head>
   <body>
-    <div id="wrapper">
+    <div class="wrapper">
       <div id="page">
         <div id="sidebar">
           <ul id="sidebar-items">
@@ -285,6 +278,7 @@
 
             </ol>
           </div>
+
         </div>
 
       </div>
@@ -293,10 +287,8 @@
     
     <div class="footer">
       <hr class="footer-rule" />
-      <div class="footer-wrapper">
-        <div class="footer-text">
-          &copy; 2012 CafePress Inc.
-        </div>
+      <div class="footer-text">
+        &copy; 2012 CafePress Inc.
       </div>
     </div>
   </body>
