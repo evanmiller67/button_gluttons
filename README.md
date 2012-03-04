@@ -3,9 +3,14 @@ ButtonGluttons is a demo Code PaLOUsa app to increase your chances of winning a 
 You're automatically entered to win just by registering.
 Your buttons are actually raffle tickets for the drawing.
 
+### ZOMG [Leaderboard](http://buttongluttons.heroku.com)
+### WTF [Twitter feed](http://www.twitter.com/buttongluttons)
+
 ## How do I join this madness?
 Come to the CafePress booth to get a QR code you can use to register - this is specific to you. Also you get buttons, [yay](http://alltheragefaces.com/img/faces/png/happy-epic-win.png)!
-We'll take your name and email address and not spam you, just send game updates. You can sign up for the CafePress newsletter if you want.
+We'll take your name and email address and not spam you, just send game updates.
+You can sign up for the CafePress newsletter if you want.
+Registered code is saved in cookie/session when you complete registration.
 
 ## Gameplay
 After you're registered, scan someone else's QR button and battle them!
@@ -14,7 +19,7 @@ After you're registered, scan someone else's QR button and battle them!
 - Only your most current roll counts
 - Whoever has the better weapon, wins
 - Take one of their buttons to shame them and show your button gluttony
-- Play until you have no more badges
+- Play until you have no more badges; [DBAD](http://www.youtube.com/watch?v=RfiQYRn7fBg)
 
 ### Bosses - CafePress employees
 - Count for 2 buttons
@@ -31,38 +36,15 @@ After you're registered, scan someone else's QR button and battle them!
 ### Weaponry
 
 
-## ZOMG [Leaderboard](http://buttongluttons.heroku.com)
-## WTF [Twitter feed](http://www.twitter.com/buttongluttons)
-  
+## Swag to win
 
-REGISTER - Scan the unique QR code, a page to register just for you
 
-- Name, email, CP newsletter (unchecked by default)
-- QR code has a special 5 alpha-numeric code that is yours (on button/merch)
-- Your registered code is saved in cookie/session when you register
-
-walk around, battle people (scan their QR code)
-both players must acknowledge that you're playing
-Randomly select 1 of 20 weapons (show weapon and # rolled)
-Larger weapon takes 1 HP from other person
-if you win, you choose which (1) button to take from other person
-play until you have no more buttons
-try to play without buttons, you get the jurassic park "you didn't say the magic word"
-	http://www.youtube.com/watch?v=RfiQYRn7fBg
-
-announce winner @ marc's keynote
-winner has the most buttons at the end
-convert buttonsf to raffle entries & select winner
+### The drawing
+Winner is announced the CafePress keynote.
+Winner has the most buttons at the end.
+Buttons are converted to raffle tickets (keep your buttons).
 
 BOSSES - CP employees have unlimited life
-
-Achievements
-	- beat CP employee (big button)
-	- beat 3 CP employees
-	- beat all CP employees
-	- beat 1/5/10/20/50/100 people
-	- 10/20/50/100 battles
-	- 3/5/8/10 kill streak
 
 Possible merch to use?
 
