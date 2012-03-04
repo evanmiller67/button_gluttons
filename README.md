@@ -53,7 +53,7 @@ After you're registered, scan someone else's QR button and battle them!
 - Mouse pads
 - CafePress coupon codes (make your own!)
 
-### Badge Ideas
+### Design Ideas
 - Narwhal
 - Bacon
 - Cupcake
