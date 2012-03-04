@@ -40,8 +40,8 @@ After you're registered, scan someone else's QR button and battle them!
 
 
 ### The drawing
-Winner is announced the CafePress keynote.
-Winner has the most buttons at the end.
+Winner is announced the CafePress keynote;
+has the most buttons at the end.
 Buttons are converted to raffle tickets (keep your buttons).
 
 BOSSES - CP employees have unlimited life
