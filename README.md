@@ -16,17 +16,30 @@ After you're registered, scan someone else's QR button and battle them!
 - Take one of their buttons to shame them and show your button gluttony
 - Play until you have no more badges
 
-## Bosses - CafePress employees
+### Bosses - CafePress employees
 - Count for 2 buttons
 - Have scarce buttons 
+
+### Achievements
+- Beat CP employee
+- Beat 3 CP employees
+- Beat all CP employees
+- Beat 1/5/10/20/50/100 people
+- 10/20/50/100 battles
+- 3/5/8/10 kill streak
+
+### Weaponry
+
 
 ## ZOMG [Leaderboard](http://buttongluttons.heroku.com)
 ## WTF [Twitter feed](http://www.twitter.com/buttongluttons)
   
+
 REGISTER - Scan the unique QR code, a page to register just for you
-	- Name, email, CP newsletter (unchecked by default)
-	- QR code has a special 5 alpha-numeric code that is yours (on button/merch)
-	- Your registered code is saved in cookie/session when you register
+
+- Name, email, CP newsletter (unchecked by default)
+- QR code has a special 5 alpha-numeric code that is yours (on button/merch)
+- Your registered code is saved in cookie/session when you register
 
 walk around, battle people (scan their QR code)
 both players must acknowledge that you're playing
