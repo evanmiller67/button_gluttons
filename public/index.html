@@ -179,29 +179,29 @@
       	min-height: 100%;
       	height: auto !important;
       	height: 100%;
-      	margin: 0 auto -24px; /* the bottom margin is the negative value of the footer's height */
+      	margin: 0 auto -32px; /* the bottom margin is the negative value of the footer's height */
       }
       .footer, .push {
-      	height: 24px; /* .push must be the same height as .footer */
+      	height: 32px; /* .push must be the same height as .footer */
       }
       
       .footer {
         width: 200px;
         clear: both;
         text-align: right;
-        padding-top: 12px;
         margin-left: auto;
         margin-right: 0px;
       }
-      
+      .footer-padding{
+        padding-top: 10px;
+      }
       .footer-rule {
         background-color: #CCC;
         border: none;
         height: 1px;
       }
       .footer-text {
-        padding-top: 5px;
-        padding-right: 5px;
+        padding: 5px;
         color: #BBB;
         font-size: 10px;
         font-style: italic;
@@ -286,7 +286,8 @@
     </div>
     
     <div class="footer">
-      <hr class="footer-rule" />
+      <div class="footer-padding" />
+      <div class="footer-rule" />
       <div class="footer-text">
         &copy; 2012 CafePress Inc.
       </div>
