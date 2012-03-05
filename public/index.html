@@ -9,8 +9,8 @@
       html, body {
       	height: 100%;
         background-color: #f0f0f0;
-        background-image: url('/assets/header-gradient.png');
-        background-repeat: repeat-x;
+        /*background-image: url('/assets/header-gradient.png');
+        background-repeat: repeat-x;*/
         font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
         font-size: 13px;
         color: #333;
@@ -40,7 +40,9 @@
       #content {
         float: left;
         background-color: white;
-        border: 3px solid #aaa;
+        border-left: 3px solid #aaa;
+        border-right: 3px solid #aaa;
+        border-bottom: 3px solid #aaa;
         padding: 25px;
         width: 500px;
       }
@@ -179,10 +181,22 @@
       #banner {
         float: left;
         position: absolute;
+        height:35px;
+        width:100%;
+background: #2d455c; /* Old browsers */
+background: -moz-linear-gradient(top,  #2d455c 0%, #6b8299 50%, #4c667f 51%, #335e7f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2d455c), color-stop(50%,#6b8299), color-stop(51%,#4c667f), color-stop(100%,#335e7f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #2d455c 0%,#6b8299 50%,#4c667f 51%,#335e7f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #2d455c 0%,#6b8299 50%,#4c667f 51%,#335e7f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #2d455c 0%,#6b8299 50%,#4c667f 51%,#335e7f 100%); /* IE10+ */
+background: linear-gradient(top,  #2d455c 0%,#6b8299 50%,#4c667f 51%,#335e7f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d455c', endColorstr='#335e7f',GradientType=0 ); /* IE6-9 */
+      }
+      #banner img{
         padding-left: 15px;
       }
       .banner-push {
-        margin-top: 75px;
+        margin-top: 35px;
       }
     </style>
     <script type="text/javascript">
