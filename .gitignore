@@ -28,6 +28,10 @@
 *.sqlite3
 tmp
 
+# Assets #
+##########
+/public/assets
+
 # OS generated files #
 ######################
 .DS_Store?
