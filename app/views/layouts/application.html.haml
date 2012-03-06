@@ -13,104 +13,15 @@
         %img{:src => "http://codepalousa.com/templates/rt_entropy_j15/images/logo/style6/logo2.png"}
 
       #page
-        #sidebar.banner-push
-          %ul#sidebar-items
-            %li
-              %h3 Is this real life?
-              %ul.links
-                %li 
-                  %a{:href => "leaderboard"}ZOMG LEADERBOARD!
-                %li 
-                  %a{:href => "http://twitter.com/buttongluttons"}WTF Twitter Feed
-                %li 
-                  %a{:href => "rules"}Rules
 
-      #content.banner-push
-        #header-img
-          %img{:src => image_tag("header.png") }
-
-        #header
-        %h1 ~ ButtonGluttons ~
-
-  :preserve 
-    <div class="wrapper">
-      <div id="banner">
-        <img src="http://codepalousa.com/templates/rt_entropy_j15/images/logo/style6/logo2.png" />
-      </div>
-
-        <div id="content" class="banner-push">
-          <div id="header-img">
-            <img src="/assets/header.png" />
-          </div>
-
-          <div id="header">
-            <h1>~ ButtonGluttons ~</h1>
-          </div>
-
-          <div id="about">
-            <h3>What is ButtonGluttons?</h3>
-            <div id="about-content">
-              <p>ButtonGluttons is a social game experience for codepaLOUsa brought to you by <a href="http://www.cafepress.com">CafePress.com</a>. Playing increases your chances of winning a grand prize drawing give away.</p>
-              <p>You're automatically entered to win just by registering. Your buttons are actually raffle tickets for the drawing.</p>
-            </div>
-          </div>
-
-          <div id="getting-started">
-            <h2>:TODO:</h2>
-
-            <ol>
-              <li>
-                <h2>Register</h2>
-                <p>All we want is your name and email address. We wont spam you, but will send your game stats.</p>
-              </li>
-
-              <li>
-                <h2>Gameplay</h2>
-                <p>
-                  <ul id="gameplay">
-                    <li>You may roll for a weapon 3 times</li>
-                    <li>Only your most current roll counts</li>
-                    <li>Whoever has the better weapon, wins</li>
-                    <li>Take one of their buttons to shame them and show your button gluttony</li>
-                    <li>Play until you have no more badges</li>
-                    <li>Profit!</li>
-                  </ul>
-                </p>
-              </li>
-
-              <li>
-                <h2>Bosses - CafePress Employees</h2>
-                <p>
-                  <ul id="bosses">
-                    <li>Count for 2 buttons</li>
-                    <li>Have scarce buttons</li>
-                  </ul>
-                </p>
-              </li>
-
-            </ol>
-          </div>
-
-        </div>
-
-      </div>
-      <div class="push"></div>
-    </div>
-    
-    <div class="footer">
-      <div class="footer-padding" />
-      <div class="footer-rule" />
-      <div class="footer-text">
-        &copy; 2012 CafePress Inc.
-      </div>
-    </div>
-
-
-
-
-
-
-      = yield
-
+        = yield
+  
+        .push
+       
+        .footer
+          .footer-padding
+          .footer-rule
+          .footer-text
+            &copy; 2012 CafePress Inc.
 
   = javascript_include_tag :application
