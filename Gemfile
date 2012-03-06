@@ -13,12 +13,11 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'twitter'
-gem 'sorcery'
-gem 'psych'   # correct a problem with YAML parsing of the WORDS arrays
+gem 'json'
 
 group :development do
-  gem 'linecache19', :git => 'git://github.com/mark-moseley/linecache'
-  gem 'ruby-debug-base19x', '~> 0.11.30.pre4'
+  # gem 'linecache19', :git => 'git://github.com/mark-moseley/linecache'
+  # gem 'ruby-debug-base19x', '~> 0.11.30.pre4'
   gem 'ruby-debug19'
 
   gem 'hirb'
