@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/mark-moseley/linecache
+  revision: 869c6a65155068415925067e480741bd0a71527e
+  specs:
+    linecache19 (0.5.12)
+      ruby_core_source (>= 0.1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -61,8 +68,6 @@ GEM
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
     json (1.6.5)
-    linecache19 (0.5.12)
-      ruby_core_source (>= 0.1.4)
     mail (2.4.1)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -100,6 +105,11 @@ GEM
     ruby-debug-base19 (0.11.25)
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug-base19x (0.11.30.pre10)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      rake (>= 0.8.1)
       ruby_core_source (>= 0.1.4)
     ruby-debug19 (0.11.6)
       columnize (>= 0.3.1)
@@ -152,8 +162,10 @@ DEPENDENCIES
   hirb
   jquery-rails
   json
+  linecache19!
   pg
   rails (= 3.2.2)
+  ruby-debug-base19x (~> 0.11.30.pre4)
   ruby-debug19
   sass-rails (~> 3.2.3)
   sqlite3-ruby
