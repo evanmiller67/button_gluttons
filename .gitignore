@@ -30,7 +30,8 @@ tmp
 
 # Assets #
 ##########
-/public/assets
+/public/assets/
+app/assets/images/qr_codes/
 
 # OS generated files #
 ######################
