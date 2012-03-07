@@ -16,10 +16,11 @@ ActiveRecord::Schema.define(:version => 20120307190407) do
   create_table "players", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.boolean  "is_boss",    :default => false
-    t.boolean  "active",     :default => true
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "is_boss",       :default => false
+    t.boolean  "is_registered", :default => false
+    t.boolean  "active",        :default => true
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
 end
