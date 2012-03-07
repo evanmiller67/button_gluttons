@@ -4,8 +4,6 @@
       html, body {
         height: 100%;
         background-color: #f0f0f0;
-        /*background-image: url('/assets/header-gradient.png');
-        background-repeat: repeat-x;*/
         font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
         font-size: 13px;
         color: #333;
