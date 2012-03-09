@@ -35,7 +35,9 @@ namespace :qr do
 
     # Make google generate the QR code
     # escape the URI
-    url = Rails.env == "production" ? "http://buttongluttons.com/players/" : "http://localhost:3000/players/"
+    # Force the urls to go to buttongluttons.com
+    # url = Rails.env == "production" ? "http://buttongluttons.com/players/" : "http://localhost:3000/players/"
+    url = "http://buttongluttons.com/players/"
     request = "/chart?cht=qr&chs=#{qr_size}&chl="
     request << URI.escape(url, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
     gapi = "https://chart.googleapis.com"
