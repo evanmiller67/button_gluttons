@@ -65,6 +65,6 @@ ButtonGluttons::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  # Prevent a simple Rails oversight from becoming a nightmare
+  # Force a whitelisting of all mass_assignments
   config.active_record.whitelist_attributes = true
 end

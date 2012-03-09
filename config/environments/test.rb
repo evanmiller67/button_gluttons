@@ -34,4 +34,7 @@ ButtonGluttons::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # Force a whitelisting of all mass_assignments
+  config.active_record.whitelist_attributes = true
 end

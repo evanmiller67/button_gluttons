@@ -34,4 +34,7 @@ ButtonGluttons::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Force a whitelisting of all mass_assignments
+  config.active_record.whitelist_attributes = true
 end
