@@ -3,6 +3,7 @@ class CreatePlayers < ActiveRecord::Migration
     create_table :players do |t|
       t.string  :first_name
       t.string  :last_name
+      t.string  :email_address
       t.boolean :is_boss,       :default => false
       t.boolean :is_registered, :default => false
 
