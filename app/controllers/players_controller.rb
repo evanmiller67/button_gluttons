@@ -14,15 +14,22 @@ class PlayersController < ApplicationController
   def show
     @player = Player.find(params[:id])
 
-    if @player.is_registered?
+    if @player.is_registered? && cookies[:player_id] == @player.id
+      # show stats
       respond_to do |format|
         format.html # show.html.erb
         format.json { render json: @player }
       end
+    elsif @player.is_registered? && cookies[:player_id] != @player.id
+      # FIGHT!
+    elsif !@player.is_registered? && cookies[:player_id] == @player.id
+      # WTF!
+    elsif !@player.is_registered? && cookies[:player_id] != @player.id
+      # Register
+      redirect_to :edit_player, notice: 'Please complete the registration to continue'
     else
-      redirect_to :edit_player, notice: 'Player was successfully updated.'
     end
-    
+
   end
 
   # GET /players/new
@@ -62,6 +69,7 @@ class PlayersController < ApplicationController
   def update
     @player = Player.find(params[:id])
     @player.is_registered = true
+    cookies[:player_id] = @player.id
 
     respond_to do |format|
       if @player.update_attributes(params[:player])
