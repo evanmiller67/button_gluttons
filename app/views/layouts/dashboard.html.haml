@@ -1,0 +1,27 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:name => "author", :content => "CafePress"}
+    %title= "ButtonGluttons: Battle for buttons"
+
+    = stylesheet_link_tag "application"
+    = csrf_meta_tags
+
+  %body
+    .wrapper
+      #banner
+        %img{:src => "http://codepalousa.com/templates/rt_entropy_j15/images/logo/style6/logo2.png"}
+
+      #page
+
+        = yield
+  
+      .push
+       
+    .footer
+      .footer-padding
+      .footer-rule
+      .footer-text
+        &copy; 2012 CafePress Inc.
+
+  = javascript_include_tag :application
