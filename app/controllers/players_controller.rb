@@ -57,6 +57,7 @@ class PlayersController < ApplicationController
   # PUT /players/1.json
   def update
     @player = Player.find(params[:id])
+    @player.is_registered = true
 
     respond_to do |format|
       if @player.update_attributes(params[:player])
