@@ -14,10 +14,15 @@ class PlayersController < ApplicationController
   def show
     @player = Player.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @player }
+    if @player.is_registered?
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @player }
+      end
+    else
+      redirect_to :edit_player, notice: 'Player was successfully updated.'
     end
+    
   end
 
   # GET /players/new
