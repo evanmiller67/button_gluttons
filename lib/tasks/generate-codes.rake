@@ -3,7 +3,7 @@ require 'net/https'
 require 'uri'
 
 # Number of QRs to generate
-num_qrs = 5
+num_qrs = 550
 qr_size = "500x500"
 
 namespace :qr do
