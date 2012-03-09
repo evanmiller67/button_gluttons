@@ -2,11 +2,10 @@ class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
   def index
-    @players = Player.all
+    @player_count = Player.registered.count
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @players }
     end
   end
 
