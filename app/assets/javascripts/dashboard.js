@@ -1,6 +1,6 @@
 $.Juitter.start({
   searchType:"fromUser", // needed, you can use "searchWord", "fromUser", "toUser"
-  searchObject:"garbld", // needed, you can insert a username here or a word to be searched for, if you wish multiple search, separate the words by comma.
+  searchObject:"buttongluttons", // needed, you can insert a username here or a word to be searched for, if you wish multiple search, separate the words by comma.
 
   // The values below will overwrite the ones on the Juitter default configuration. 
   // They are optional here.
