@@ -4,8 +4,8 @@ class Player < ActiveRecord::Base
   # Only allow these attributes to be mass assgined
   attr_accessible :first_name, :last_name, :email_address
 
-  validates_presence_of :first_name, :last_name, :email_address, :on => :update
-  validates :email_address, :uniqueness => true, :on => :update
+  validates_presence_of :first_name, :last_name, :email_address
+  validates :email_address, :uniqueness => true
 
   default_scope where(:active => true)
   class << self
