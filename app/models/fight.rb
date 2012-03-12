@@ -1,7 +1,7 @@
 class Fight < ActiveRecord::Base
-  # has_many  :fight_players, :foreign_key => "player1_id"
-  belongs_to   :started_by, :class_name => "Player"
-  belongs_to   :opponent,   :class_name => "Player"
+  belongs_to  :started_by, :class_name => "Player"
+  belongs_to  :opponent,   :class_name => "Player"
+  has_many    :rounds
 
   attr_accessible :started_by, :opponent
 

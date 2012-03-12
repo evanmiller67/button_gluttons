@@ -22,7 +22,14 @@ class PlayersController < ApplicationController
       # FIGHT!
       # Is this player already in a fight?
       @fight = Fight.where("started_by_id = :started_by AND status = 'i'", {:started_by => @player.id}).first
-      @fight = Fight.create(:started_by => Player.find(cookies[:player_id]), :opponent => @player) unless @fight
+
+      if @fight
+        @fight.status = 'fighting'
+        @fight.rounds.create
+        @fight.save
+      else
+        @fight = Fight.create(:started_by => Player.find(cookies[:player_id]), :opponent => @player)
+      end
 
       redirect_to @fight
     elsif @player.is_registered? && cookies[:player_id].blank?
