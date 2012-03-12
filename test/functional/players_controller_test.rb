@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PlayersControllerTest < ActionController::TestCase
   setup do
-    @player = Factory(:player, :first_name => 'aaa', :last_name => 'bbb')
+    @player = Factory(:player, :first_name => 'aaa', :last_name => 'bbb', :id => '111')
   end
 
   # test "should not get index" do
@@ -26,12 +26,10 @@ class PlayersControllerTest < ActionController::TestCase
 
   test "should show fight" do
     @player.is_registered         = true
-    @request.cookies['player_id'] = '12345'
+    @request.cookies['player_id'] = '222'
 
     get :show, id: @player
-puts @request.cookies
-puts @response.cookies
-    assert_redirected_to :controller => :fights
+    assert_redirected_to :new_fight
   end
 
   test "should edit player" do

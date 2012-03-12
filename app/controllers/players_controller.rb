@@ -25,9 +25,11 @@ class PlayersController < ApplicationController
 
     # Player account NOT registered
     elsif !@player.is_registered? && cookies[:player_id].to_i == @player.id
-      # Can't fight an unregistered player
+      # This shouldn't happen!
+      redirect_to :root, notice: "Unknow thing occurred - please try again."
     elsif !@player.is_registered? && cookies[:player_id].to_i != @player.id
       # Can't fight an unregistered player
+      redirect_to :root, notice: "Cant fight an unarmed opponent.  Please ask them to register."
     elsif !@player.is_registered? && cookies[:player_id].blank?
       # Register new player
       redirect_to :edit_player, notice: "Please complete the registration to continue"
