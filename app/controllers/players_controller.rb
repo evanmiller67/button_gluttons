@@ -1,6 +1,4 @@
 class PlayersController < ApplicationController
-  # GET /players
-  # GET /players.json
   def index
     @player_count = Player.registered.count
 
@@ -9,27 +7,34 @@ class PlayersController < ApplicationController
     end
   end
 
-  # GET /players/1
-  # GET /players/1.json
   def show
-    @player = Player.find(params[:id])
+    @player   = Player.find(params[:id])
 
-    if @player.is_registered? && cookies[:player_id] == @player.id
-      # show stats
+    # Player account registered
+    if @player.is_registered? && cookies[:player_id].to_i == @player.id
+      # Show stats
       respond_to do |format|
         format.html # show.html.erb
         format.json { render json: @player }
       end
-    elsif @player.is_registered? && cookies[:player_id] != @player.id
+    elsif @player.is_registered? && cookies[:player_id].to_i != @player.id
       # FIGHT!
-    elsif !@player.is_registered? && cookies[:player_id] == @player.id
-      # WTF!
-    elsif !@player.is_registered? && cookies[:player_id] != @player.id
-      # Register
-      redirect_to :edit_player, notice: 'Please complete the registration to continue'
-    else
-    end
+      redirect_to :new_fight
+    elsif @player.is_registered? && cookies[:player_id].blank?
+      # New Device
 
+    # Player account NOT registered
+    elsif !@player.is_registered? && cookies[:player_id].to_i == @player.id
+      # Can't fight an unregistered player
+    elsif !@player.is_registered? && cookies[:player_id].to_i != @player.id
+      # Can't fight an unregistered player
+    elsif !@player.is_registered? && cookies[:player_id].blank?
+      # Register new player
+      redirect_to :edit_player, notice: "Please complete the registration to continue"
+    else
+      # Something weird happend
+      redirect_to :root, notice: "Unknown error occurred - please try again."
+    end
   end
 
   # GET /players/new

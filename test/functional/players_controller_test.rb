@@ -25,14 +25,27 @@ class PlayersControllerTest < ActionController::TestCase
   # end
 
   test "should show fight" do
-    @request.cookies['player_id'] = 'abc'
+    @player.is_registered         = true
+    @request.cookies['player_id'] = '12345'
+
     get :show, id: @player
-    # assert_response :redirect
-    assert_redirected_to :controller => :fight
+puts @request.cookies
+puts @response.cookies
+    assert_redirected_to :controller => :fights
+  end
+
+  test "should edit player" do
+    @player.is_registered         = false
+    @request.cookies['player_id'] = @player.id
+
+    get :show, id: @player
+    assert_response :success
   end
 
   test "should show player" do
+    @player.is_registered         = true
     @request.cookies['player_id'] = @player.id
+
     get :show, id: @player
     assert_response :success
   end
