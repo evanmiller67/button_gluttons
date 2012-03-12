@@ -17,9 +17,14 @@ class PlayersController < ApplicationController
         format.html # show.html.erb
         format.json { render json: @player }
       end
+
     elsif @player.is_registered? && cookies[:player_id].to_i != @player.id
       # FIGHT!
-      redirect_to :new_fight
+      # Is this player already in a fight?
+      @fight = Fight.where("started_by_id = :started_by AND status = 'i'", {:started_by => @player.id}).first
+      @fight = Fight.create(:started_by => Player.find(cookies[:player_id]), :opponent => @player) unless @fight
+
+      redirect_to @fight
     elsif @player.is_registered? && cookies[:player_id].blank?
       # New Device
 
@@ -27,7 +32,7 @@ class PlayersController < ApplicationController
     elsif !@player.is_registered? && cookies[:player_id].to_i == @player.id
       # This shouldn't happen!
       redirect_to :root, notice: "Unknow thing occurred - please try again."
-    elsif !@player.is_registered? && cookies[:player_id].to_i != @player.id
+    elsif !@player.is_registered? && !cookies[:player_id].blank? && (cookies[:player_id].to_i != @player.id)
       # Can't fight an unregistered player
       redirect_to :root, notice: "Cant fight an unarmed opponent.  Please ask them to register."
     elsif !@player.is_registered? && cookies[:player_id].blank?
@@ -43,7 +48,11 @@ class PlayersController < ApplicationController
   def edit
     @player = Player.find(params[:id])
     
-    redirect_to :root, notice: "You don't own this account" unless @player.is_registered && cookies[:player_id].to_i == @player.id
+    if cookies[:player_id].blank? || cookies[:player_id] == @player.id
+      # proceed
+    else
+      redirect_to :root, notice: "No editing allowed!"
+    end
   end
 
 

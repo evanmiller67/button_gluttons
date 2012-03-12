@@ -1,5 +1,5 @@
 class Player < ActiveRecord::Base
-  has_many :fights, :foreign_key => :started_by
+  has_many :fights, :foreign_key => "started_by"
 
   # Only allow these attributes to be mass assgined
   attr_accessible :first_name, :last_name, :email_address
@@ -11,5 +11,7 @@ class Player < ActiveRecord::Base
   class << self
     def active;     where(:active => true); end
     def registered; where(:is_registered => true); end
+    # def fights; joins(:fights); end
+    # def opponents; where(:ajfljkajsfasjflj); end
   end
 end

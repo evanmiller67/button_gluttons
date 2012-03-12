@@ -14,11 +14,12 @@
 ActiveRecord::Schema.define(:version => 20120309214602) do
 
   create_table "fights", :force => true do |t|
-    t.integer  "started_by"
-    t.integer  "opponent"
-    t.boolean  "active",     :default => true
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.integer  "started_by_id"
+    t.integer  "opponent_id"
+    t.string   "status",        :default => "i"
+    t.boolean  "active",        :default => true
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   create_table "players", :force => true do |t|
