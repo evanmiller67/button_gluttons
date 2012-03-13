@@ -13,7 +13,7 @@ module ApplicationHelper
         when :notice  then :success
         else :info
       end
-      result << "humane.#{type}('#{message}'); "
+      result << "$('#flash').addClass('alert-#{type}').html('#{message}'); "
     end
 
     return result
