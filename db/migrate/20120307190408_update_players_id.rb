@@ -1,5 +1,7 @@
 class UpdatePlayersId < ActiveRecord::Migration
   def up
-    change_column :players, :id, :integer, :limit => 8
+    if RAILS_ENV == 'production'
+      change_column :players, :id, :integer, :limit => 8
+    end
   end
 end
