@@ -66,12 +66,15 @@ class PlayersController < ApplicationController
 
   def update
     @player = Player.find(params[:id])
-    @player.is_registered = true
     cookies[:player_id] = @player.id
+
+    registered = @player.is_registered?
+    @player.is_registered = true
 
     respond_to do |format|
       if @player.update_attributes(params[:player])
-        format.html { redirect_to @player, notice: 'Player was successfully updated.' }
+        Twitter.update("#{@player.full_name} just registered to play Button Gluttons! http://buttongluttons.com/") unless registered
+        format.html { redirect_to @player }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
