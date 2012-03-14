@@ -4,16 +4,16 @@ module ApplicationHelper
     content_for(:title) { page_title }
   end
 
-  # Build the Javascript to display flash messages
+  # Build the HTML to display flash messages
   def build_flash
     result = ""
     flash.each do |type, message|
-      type = case type
-        when :alert   then :error
-        when :notice  then :success
-        else :info
-      end
-      result << "$('#flash').addClass('alert-#{type}').html('#{message}'); "
+      # type = case type
+      #   when :alert   then :info
+      #   when :notice  then :success
+      #   else :error
+      # end
+      result << "<div class='alert alert-#{type} fade in out' id='flash'><a href='#' class='close' data-dismiss='alert'>x</a>#{message}</div>"
     end
 
     return result

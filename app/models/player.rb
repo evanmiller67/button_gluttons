@@ -14,4 +14,8 @@ class Player < ActiveRecord::Base
     # def fights; joins(:fights); end
     # def opponents; where(:ajfljkajsfasjflj); end
   end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

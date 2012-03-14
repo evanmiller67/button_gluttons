@@ -14,9 +14,12 @@ class PlayersController < ApplicationController
     if @player.is_registered? && cookies[:player_id].to_i == @player.id
       # Show stats
       respond_to do |format|
-        format.html # show.html.erb
+        format.html
         format.json { render json: @player }
       end
+
+    elsif @player.is_registered? && cookies[:player_id].blank?
+      # New Device
 
     elsif @player.is_registered? && cookies[:player_id].to_i != @player.id
       # FIGHT!
@@ -32,8 +35,6 @@ class PlayersController < ApplicationController
       end
 
       redirect_to @fight
-    elsif @player.is_registered? && cookies[:player_id].blank?
-      # New Device
 
     # Player account NOT registered
     elsif !@player.is_registered? && cookies[:player_id].to_i == @player.id
@@ -41,13 +42,13 @@ class PlayersController < ApplicationController
       redirect_to :root, notice: "Unknow thing occurred - please try again."
     elsif !@player.is_registered? && !cookies[:player_id].blank? && (cookies[:player_id].to_i != @player.id)
       # Can't fight an unregistered player
-      redirect_to :root, notice: "Cant fight an unarmed opponent.  Please ask them to register."
+      redirect_to :root, info: "Cant fight an unarmed opponent.  Please ask them to register."
     elsif !@player.is_registered? && cookies[:player_id].blank?
       # Register new player
-      redirect_to :edit_player, notice: "Please complete the registration to continue"
+      redirect_to :edit_player, info: "Please complete the registration to continue"
     else
       # Something weird happend
-      redirect_to :root, notice: "Unknown error occurred - please try again."
+      redirect_to :root, error: "Unknown error occurred - please try again."
     end
   end
 
@@ -58,7 +59,7 @@ class PlayersController < ApplicationController
     if cookies[:player_id].blank? || cookies[:player_id] == @player.id
       # proceed
     else
-      redirect_to :root, notice: "No editing allowed!"
+      redirect_to :root, error: "No editing allowed!"
     end
   end
 

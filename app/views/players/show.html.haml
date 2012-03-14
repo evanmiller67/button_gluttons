@@ -1,21 +1,23 @@
-%p#notice= notice
+%form.form-horizontal
+    
+  %fieldset
+    %legend
+      Player Info
+      .pull-right
+        =gravatar_image_tag(@player.email_address, :alt => @player.full_name)
 
-%p
-  %b String:
-  = @player.first_name
-%p
-  %b String:
-  = @player.last_name
-%p
-  %b Is boss:
-  = @player.is_boss
-%p
-  %b Is registered:
-  = @player.is_registered
-%p
-  %b Active:
-  = @player.active
+    .control-group
+      %label.control-label Name
+      .controls
+        %span.input-xlarge.uneditable-input 
+          =@player.full_name
 
-= link_to 'Edit', edit_player_path(@player)
-\|
-= link_to 'Back', players_path
+    .control-group
+      %label.control-label Email
+      .controls
+        %span.input-xlarge.uneditable-input 
+          =@player.email_address 
+
+    .form-actions
+      = link_to 'Edit', edit_player_path(@player), :class => "btn btn-large btn-primary"
+      = link_to 'Back', players_path, class: "btn btn-large btn-secondary"
