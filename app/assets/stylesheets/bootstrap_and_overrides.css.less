@@ -17,10 +17,60 @@
 // @linkColor: #ff0000;
 // @baseFontSize: 20px;
 // @baseLineHeight: 25px;
-body { background-color: #fff; }
+
 header { 
   background: image-url("header_bg.gif") repeat-x;
   height: 68px;
   margin-top: -6px;
 }
 header img { padding-top: 7px; margin-left: auto; margin-right: auto; display: block;}
+
+.dash #header{ padding-top: 100px; }
+.dash h1 { text-align: center;}
+
+#juitterContainer a { display: none; }
+#juitterContainer li { border-top: 1px solid #666; list-style: none; }
+.twittList { list-style: none; margin-left: 0px; }
+
+#banner {
+  float: left;
+  position: absolute;
+  height:35px;
+  width:100%;
+background: rgb(90,129,160); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(90,129,160,1) 0%, rgba(33,49,63,1) 50%, rgba(23,38,51,1) 51%, rgba(69,86,99,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(90,129,160,1)), color-stop(50%,rgba(33,49,63,1)), color-stop(51%,rgba(23,38,51,1)), color-stop(100%,rgba(69,86,99,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(90,129,160,1) 0%,rgba(33,49,63,1) 50%,rgba(23,38,51,1) 51%,rgba(69,86,99,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(90,129,160,1) 0%,rgba(33,49,63,1) 50%,rgba(23,38,51,1) 51%,rgba(69,86,99,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(90,129,160,1) 0%,rgba(33,49,63,1) 50%,rgba(23,38,51,1) 51%,rgba(69,86,99,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(90,129,160,1) 0%,rgba(33,49,63,1) 50%,rgba(23,38,51,1) 51%,rgba(69,86,99,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a81a0', endColorstr='#455663',GradientType=0 ); /* IE6-9 */
+}
+#banner img{
+  padding-left: 15px;
+}
+.banner-push {
+  margin-top: 35px;
+}
+
+.footer {
+  width: 200px;
+  clear: both;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0px;
+}
+.footer-padding{
+  padding-top: 10px;
+}
+.footer-rule {
+  background-color: #CCC;
+  border: none;
+  height: 1px;
+}
+.footer-text {
+  padding: 5px;
+  color: #BBB;
+  font-size: 10px;
+  font-style: italic;
+}

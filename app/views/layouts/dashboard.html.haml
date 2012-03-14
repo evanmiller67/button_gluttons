@@ -4,17 +4,26 @@
     %meta{:name => "author", :content => "CafePress"}
     %title= "ButtonGluttons: Battle for buttons"
 
-    = stylesheet_link_tag "dashboard"
-    = csrf_meta_tags
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+
+    = stylesheet_link_tag "application", :media => "all"
+
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "images/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "images/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
+    %link{:href => "images/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
 
   %body
-    .wrapper
-      #flash.alert
-      #banner
-        %img{:src => "http://codepalousa.com/templates/rt_entropy_j15/images/logo/style6/logo2.png"}
+    #banner
+      %img{:src => "http://codepalousa.com/templates/rt_entropy_j15/images/logo/style6/logo2.png"}
+    
+    .container.dash
+      #header
 
-      #page
-
+      %row
         = yield
   
       .push
@@ -26,6 +35,3 @@
         &copy; 2012 CafePress Inc.
 
   = javascript_include_tag :application
-
-  :javascript
-    #{build_flash}

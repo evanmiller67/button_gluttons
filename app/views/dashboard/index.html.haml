@@ -1,28 +1,13 @@
-#sidebar.banner-push
-  %ul#sidebar-items
-    %li
-      %h3 Is this real life?
-      %ul.links
-        %li 
-          %a{:href => "leaderboard"}ZOMG LEADERBOARD!
-        %li 
-          %a{:href => "http://twitter.com/buttongluttons"}WTF Twitter Feed
-        %li 
-          %a{:href => "rules"}Rules
-        %li
-          %a{:href => "http://cafepressinc.com/careers/"}Need a job?
-    %li
-      #juitterContainer
+.row
+  .span5.offset2
+    %section#description
+      =image_tag "header.png"
+      %h1 ~ ButtonGluttons ~
 
-#content.banner-push
-  #header-img
-    =image_tag("header.png")
-  #header
-    %h1 ~ ButtonGluttons ~
+    %section#description
+      .page-header
+        %h2 What is ButtonGluttons?
 
-  #about
-    %h3 What is ButtonGluttons?
-    #about-content
       %p 
         ButtonGluttons is a social game experience for codepaLOUsa brought to you by 
         <a href="http://www.cafepress.com">CafePress.com</a>. 
@@ -31,19 +16,19 @@
         You're automatically entered to win just by registering. Your buttons are actually 
         raffle tickets for the drawing.
 
-  #getting-started
-    %h2 :TODO:
-    %ol
-      %li
-        %h2 Register
-        %p 
-          All we want is your name and email address. We wont spam you, 
-          but will send your game stats.
+    %section#todo
+      .page-header 
+        %h2 How to Play
+      %ol
+        %li
+          %h4 Register
+          %p 
+            All we want is your name and email address. We wont spam you, 
+            but will send your game stats.
 
-      %li
-        %h2 Gameplay
-        %p
-          %ul#gameplay
+        %li
+          %h4 Gameplay
+          %ul
             %li You may roll for a weapon 3 times
             %li Only your most current roll counts
             %li Whoever has the better weapon, wins
@@ -51,9 +36,24 @@
             %li Play until you have no more badges
             %li Profit!
 
-      %li
-        %h2 Bosses - CafePress Employees
-        %p
-          %ul#bosses
+        %li
+          %h4 Bosses - CafePress Employees
+          %ul
             %li Count for 2 buttons
             %li Have scarce buttons
+
+  .span3
+    %ul.unstyled
+      %li
+        %h3 Is this real life?
+        %ul.unstyled
+          %li 
+            %a{:href => "leaderboard"}ZOMG LEADERBOARD!
+          %li 
+            %a{:href => "http://twitter.com/buttongluttons"}WTF Twitter Feed
+          %li 
+            %a{:href => "rules"}Rules
+          %li
+            %a{:href => "http://cafepressinc.com/careers/"}Need a job?
+      %li
+        #juitterContainer
