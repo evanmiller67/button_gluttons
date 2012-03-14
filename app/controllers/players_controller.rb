@@ -8,7 +8,7 @@ class PlayersController < ApplicationController
   end
 
   def show
-    @player   = Player.find(params[:id])
+    @player = Player.find(params[:id])
 
     # Player account registered
     if @player.is_registered? && cookies[:player_id].to_i == @player.id
