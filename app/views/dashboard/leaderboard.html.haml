@@ -1,0 +1,43 @@
+.row
+  .span6
+    %section#gamestats
+      .page-header
+        %h1 Game Leaders
+
+      %table.table.table-striped.table-bordered
+        %thead
+          %tr
+            %th Place
+            %th Name
+            %th Score
+        %tbody
+          - @players.each_with_index do |p, index|
+            %tr
+              %td 
+                =index+1
+              %td
+                =p.full_name
+              %td
+                =rand(100)
+
+
+  .span6
+    %section#twitter
+      .page-header
+        %h1 Twitter
+
+      %table.table.table-striped.table-bordered
+        %thead
+          %tr
+            %th Place
+            %th Name
+            %th Score
+        %tbody
+          - @players.each_with_index do |p, index|
+            %tr
+              %td 
+                =index+1
+              %td
+                =p.full_name
+              %td
+                =rand(100)

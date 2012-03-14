@@ -1,5 +1,6 @@
 ButtonGluttons::Application.routes.draw do
-  match '/players' => redirect('/')
+  match '/players'      => redirect('/')
+  match '/leaderboard'  => 'dashboard#leaderboard'
 
   resources :players, :only => [:show, :update, :edit]
   resources :fights,  :except => [:destroy, :index]
