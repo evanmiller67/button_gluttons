@@ -11,15 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120312181430) do
+ActiveRecord::Schema.define(:version => 20120315141422) do
 
   create_table "fights", :force => true do |t|
     t.integer  "started_by_id"
     t.integer  "opponent_id"
-    t.string   "status",        :default => "i"
-    t.boolean  "active",        :default => true
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.string   "status",          :default => "i"
+    t.boolean  "active",          :default => true
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.integer  "started_by_roll", :default => 0
+    t.integer  "opponent_roll",   :default => 0
   end
 
   create_table "players", :force => true do |t|
@@ -31,6 +33,9 @@ ActiveRecord::Schema.define(:version => 20120312181430) do
     t.boolean  "active",        :default => true
     t.datetime "created_at",                       :null => false
     t.datetime "updated_at",                       :null => false
+    t.integer  "wins",          :default => 0
+    t.integer  "losses",        :default => 0
+    t.integer  "ties",          :default => 0
   end
 
   create_table "rounds", :force => true do |t|

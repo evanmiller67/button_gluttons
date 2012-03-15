@@ -8,11 +8,11 @@ module ApplicationHelper
   def build_flash
     result = ""
     flash.each do |type, message|
-      # type = case type
-      #   when :alert   then :info
-      #   when :notice  then :success
-      #   else :error
-      # end
+      type = case type
+        when :alert   then :error
+        when :notice  then :success
+        else :error
+      end
       result << "<div class='alert alert-#{type} fade in out' id='flash'><a href='#' class='close' data-dismiss='alert'>x</a>#{message}</div>"
     end
 

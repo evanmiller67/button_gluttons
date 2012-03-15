@@ -1,0 +1,24 @@
+= form_for @player, :html => {:class => "form-horizontal"} do |f|
+  -if @player.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@player.errors.count, "error")} prohibited this player from being saved:"
+      %ul
+        - @player.errors.full_messages.each do |msg|
+          %li= msg
+
+  %fieldset
+    %legend 
+      Register New Device
+      .pull-right
+        =gravatar_image_tag(@player.email_address, :alt => @player.full_name)
+  
+    Confirm your email address.
+
+    .control-group
+      = f.label :email_address, :class => "control-label"
+      .controls
+        = f.text_field :email_address, :class => "input-xlarge", :value => nil
+
+    .form-actions
+      = f.submit 'Confirm', :class => "btn btn-large btn-primary"
+      = link_to 'Cancel', player_path(@player), class: "btn btn-large btn-secondary"
