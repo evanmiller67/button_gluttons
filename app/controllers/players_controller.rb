@@ -1,17 +1,7 @@
 class PlayersController < ApplicationController
-  def index
-    @player_count = Player.registered.count
-
-    respond_to do |format|
-      format.html # index.html.erb
-    end
-  end
+  before_filter :game_status
 
   def show
-    @player = Player.find(params[:id])
-
-    redirect_to :root, :notice => "Sorry, the game is closed right now.  Please try again later."
-
     # Player account registered
     if @player.is_registered? && cookies[:player_id].to_i == @player.id
       # Show stats
@@ -54,10 +44,8 @@ class PlayersController < ApplicationController
     end
   end
 
-  # GET /players/1/edit
+
   def edit
-    @player = Player.find(params[:id])
-    
     if cookies[:player_id].blank? || cookies[:player_id] == @player.id
       # proceed
     else
@@ -67,7 +55,6 @@ class PlayersController < ApplicationController
 
 
   def update
-    @player = Player.find(params[:id])
     cookies[:player_id] = @player.id
 
     registered = @player.is_registered?
@@ -85,15 +72,15 @@ class PlayersController < ApplicationController
     end
   end
 
-  # DELETE /players/1
-  # DELETE /players/1.json
-  def destroy
-    @player = Player.find(params[:id])
-    @player.destroy
+  private
 
-    respond_to do |format|
-      format.html { redirect_to players_url }
-      format.json { head :no_content }
+  # Is the game closed to players right now?
+  def game_status
+    @player = Player.find(params[:id])
+
+    unless @player.is_boss?
+      redirect_to :root, :notice => "Sorry, the game is closed right now.  Please try again later."
+      return false
     end
   end
 end
