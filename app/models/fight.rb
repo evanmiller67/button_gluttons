@@ -5,8 +5,6 @@ class Fight < ActiveRecord::Base
 
   attr_accessible :started_by, :opponent, :started_by_roll, :opponent_roll
 
-  default_scope where(:active => true)
-
   class << self
     def active;     where(:active => true); end
     def inactive;   where(:active => false); end

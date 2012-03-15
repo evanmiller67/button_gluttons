@@ -18,11 +18,15 @@ class PlayersController < ApplicationController
       end
 
     elsif @player.is_registered? && cookies[:player_id].to_i != @player.id
+      ###########
       # FIGHT!
-      roll = rand(20)
+      ###########
+      roll = rand(1..20)
       
       # Did we start this fight or are we finishing it? 
-      @fight = Fight.where(:started_by_id => @player)
+      sql = "(started_by_id = :started_by AND opponent_id = :opponent) OR "
+      sql << " (started_by_id = :opponent AND opponent_id = :started_by) "
+      @fight = Fight.active.where(sql, {:started_by => cookies[:player_id].to_i, :opponent => @player.id}).last
 
       if @fight.blank?
         # We are starting this fight!
@@ -32,10 +36,12 @@ class PlayersController < ApplicationController
           :started_by_roll  => roll
           )
       else
-        # We are finishing this fight!
-        @fight.opponent_roll  = roll
-        @fight.active         = false
-        @fight.save
+        unless cookies[:player_id].to_i == @fight.started_by_id
+          # We are finishing this fight!
+          @fight.opponent_roll  = roll
+          @fight.active         = false
+          @fight.save
+        end
       end
 
       # Is this player already in a fight?
