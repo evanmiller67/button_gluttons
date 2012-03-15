@@ -21,7 +21,7 @@ class PlayersController < ApplicationController
       ###########
       # FIGHT!
       ###########
-      roll = rand(1..20)
+      roll = rand(19)+1
       
       # Did we start this fight or are we finishing it? 
       sql = "(started_by_id = :started_by AND opponent_id = :opponent) OR "
