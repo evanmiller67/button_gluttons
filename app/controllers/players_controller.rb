@@ -10,6 +10,8 @@ class PlayersController < ApplicationController
   def show
     @player = Player.find(params[:id])
 
+    redirect_to :root, :notice => "Sorry, the game is closed right now.  Please try again later."
+
     # Player account registered
     if @player.is_registered? && cookies[:player_id].to_i == @player.id
       # Show stats
