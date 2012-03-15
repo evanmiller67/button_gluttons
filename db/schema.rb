@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315141422) do
+ActiveRecord::Schema.define(:version => 20120315195036) do
 
   create_table "fights", :force => true do |t|
     t.integer  "started_by_id"
