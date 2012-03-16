@@ -21,6 +21,7 @@ class PlayersController < ApplicationController
       ###########
       # FIGHT!
       ###########
+      hulk = %w(STOMPED beat Maimed *CRUSHED* *!*DEVASTATED*!* Felled Smote SMASHED! Trounced Fragged Burninated Asploded Splatted Flattened Assassinated DECIMATED!)
       roll = rand(19)+1
       
       # Did we start this fight or are we finishing it? 
@@ -42,6 +43,17 @@ class PlayersController < ApplicationController
           :opponent         => @player,
           :started_by_roll  => roll
           )
+
+        # Are we playing the ButtonGlutton Master!?
+        if @player.id == 555
+          roll = rand(19)+1
+          roll = roll + roll < 14 ? roll + 5 : 20
+          @fight.opponent_roll = roll
+          @fight.active = false
+          @fight.save
+
+          Twitter.update "#{@fight.started_by.first_name} and #{@fight.opponent.first_name} battled in Button Gluttons! #buttongluttons #codepalousa #CPL12"
+        end
       else
         unless cookies[:player_id].to_i == @fight.started_by_id
           # Give BOSSes extra help
@@ -54,7 +66,6 @@ class PlayersController < ApplicationController
           @fight.active         = false
           @fight.save
 
-          hulk = %w(STOMPED beat Maimed *CRUSHED* *!*DEVASTATED*!* Felled Smote SMASHED! Trounced Fragged Burninated Asploded Splatted Flattened Assassinated DECIMATED!)
           if @fight.started_by_roll == @fight.opponent_roll
             @fight.started_by.increment!(:ties)
             @fight.opponent.increment!(:ties)
