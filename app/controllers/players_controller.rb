@@ -30,13 +30,25 @@ class PlayersController < ApplicationController
 
       if @fight.blank?
         # We are starting this fight!
+
+        # Give BOSSes extra help
+        cookie_man = Player.find(cookies[:player_id])
+        if cookie_man.is_boss?
+            roll = roll + roll < 14 ? roll + 5 : 20
+        end
+
         @fight = Fight.create(
-          :started_by       => Player.find(cookies[:player_id]), 
+          :started_by       => cookie_man,
           :opponent         => @player,
           :started_by_roll  => roll
           )
       else
         unless cookies[:player_id].to_i == @fight.started_by_id
+          # Give BOSSes extra help
+          if @fight.started_by.is_boss?
+            roll = roll + roll < 14 ? roll + 5 : 20
+          end
+          
           # We are finishing this fight!
           @fight.opponent_roll  = roll
           @fight.active         = false
@@ -46,11 +58,11 @@ class PlayersController < ApplicationController
           if @fight.started_by_roll > @fight.opponent_roll
             @fight.started_by.increment!(:wins)
             @fight.opponent.increment!(:losses)
-            Twitter.update "#{@fight.started_by.first_name} just #{hulk.sample} #{@fight.opponent.first_name} in Button Gluttons!"
+            Twitter.update "#{@fight.started_by.first_name} just #{hulk.sample} #{@fight.opponent.first_name} in Button Gluttons! #buttongluttons #codepalousa #CPL12"
           else
             @fight.started_by.increment!(:losses)
             @fight.opponent.increment!(:wins)
-            Twitter.update "#{@fight.opponent.first_name} just #{hulk.sample} #{@fight.started_by.first_name} in Button Gluttons!"
+            Twitter.update "#{@fight.opponent.first_name} just #{hulk.sample} #{@fight.started_by.first_name} in Button Gluttons! #buttongluttons #codepalousa #CPL12"
           end
         end
       end
