@@ -17,7 +17,7 @@ class FightsController < ApplicationController
     @player_score   = @fight.score(@player)
     @opponent_score = @fight.score(@opponent)
     @winlose        = @player_score > @opponent_score ? "lose" : "win"
-    
+
     respond_to do |format|
       format.html
       format.json { render json: @fight }
@@ -26,12 +26,6 @@ class FightsController < ApplicationController
 
   def update
     @fight = Fight.find(params[:id])
-
-    # update the round with the latest roll
-
-    # is this round over?
-
-    # is this fight over?
 
     respond_to do |format|
       if @fight.update_attributes(params[:fight])
