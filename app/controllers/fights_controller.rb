@@ -16,8 +16,8 @@ class FightsController < ApplicationController
 
     @player_score   = @fight.score(@player)
     @opponent_score = @fight.score(@opponent)
-    @banner         = "lose"
-
+    @winlose        = @player_score > @opponent_score ? "lose" : "win"
+    
     respond_to do |format|
       format.html
       format.json { render json: @fight }

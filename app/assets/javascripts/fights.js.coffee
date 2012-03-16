@@ -2,14 +2,17 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-showscore = () ->
+showscore = ->
   $('.score.player').removeClass('hidden')
   $('.weapon.player').attr('src', $('.player.weapon.cache').attr('src'))
 
-showbanner = () ->
-  # banner = $('#banner').attr('data')
-  # $('.banner).attr('src', '$('#banner').attr('data'))
-  $('#myModal').modal('show')
+showbanner = ->
+  $('#winlose').modal('show')
 
-setTimeout showscore, 1000
-setTimeout showbanner, 1500
+`$('#winlose').on('hidden', function () {
+  window.location = "http://buttongluttons.com/leaderboard";
+  return false;
+})`
+
+setTimeout showscore, 2000
+setTimeout showbanner, 2500

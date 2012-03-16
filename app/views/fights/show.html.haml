@@ -19,11 +19,9 @@
       .score.opponent.pull-right #{ @opponent_score }
 
 
-#myModal.modal.fade{:style => "display: none;"}
+#winlose.modal.fade{:style => "display: none;"}
 
   .modal-body
     %a.close{"data-dismiss" => "modal"}x
-    #banner.hidden{:data => @banner}
-    .span5
-      .thumbnail
-        #{image_tag("win.gif", :class => "banner !important", :height => "400px")}
+    .thumbnail
+      #{image_tag("#{@winlose}.gif", :class => "winlose")}
