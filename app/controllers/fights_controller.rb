@@ -16,7 +16,12 @@ class FightsController < ApplicationController
 
     @player_score   = @fight.score(@player)
     @opponent_score = @fight.score(@opponent)
-    @winlose        = @player_score > @opponent_score ? "win" : "lose"
+
+    if @player_score.to_i == 0 || @opponent_score.to_i == 0
+      @winlose = ""
+    else
+      @winlose  = @player_score > @opponent_score ? "win" : "lose"
+    end
 
     respond_to do |format|
       format.html

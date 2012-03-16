@@ -7,12 +7,13 @@ showscore = ->
   $('.weapon.player').attr('src', $('.player.weapon.cache').attr('src'))
 
 showbanner = ->
-  $('#winlose').modal('show')
+  unless $('.winlose.graphic').data("status") == ""
+    $('#winlose').modal('show')
 
 `$('#winlose').on('hidden', function () {
   window.location = "http://buttongluttons.com/leaderboard";
   return false;
 })`
 
-setTimeout showscore, 2000
-setTimeout showbanner, 2500
+setTimeout showscore, 3000
+setTimeout showbanner, 3500
