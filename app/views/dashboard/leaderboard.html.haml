@@ -1,9 +1,6 @@
 .row
   .span6
     %section#gamestats
-      .page-header
-        %h1 Game Leaders
-
       %table.table.table-striped.table-bordered
         %thead
           %tr
@@ -13,7 +10,7 @@
             %th Losses
             %th Ties
         %tbody
-          %legend Players
+          %h2 Players
           - @players.each_with_index do |p, index|
             %tr
               %td #{index+1}
@@ -25,8 +22,16 @@
               %td #{p.losses}
               %td #{p.ties}
 
+      %table.table.table-striped.table-bordered
+        %thead
+          %tr
+            %th Place
+            %th Player
+            %th Wins
+            %th Losses
+            %th Ties
         %tbody
-          %legend Bosses
+          %h2 Bosses
           - @bosses.each_with_index do |p, index|
             %tr
               %td #{index+1}
@@ -40,7 +45,5 @@
 
   .span6
     %section#twitter
-      .page-header
-        %h1 Twitter
-        #juitterLeaderboard
+      #juitterLeaderboard
 

@@ -7,7 +7,7 @@ class Player < ActiveRecord::Base
   validates_presence_of :first_name, :last_name, :email_address
   validates :email_address, :uniqueness => true
 
-  default_scope where(:active => true)
+  # default_scope where(:active => true)
   class << self
     def active;     where(:active => true); end
     def registered; where(:is_registered => true); end
