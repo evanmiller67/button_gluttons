@@ -42,8 +42,7 @@ class PlayersController < ApplicationController
           @fight.active         = false
           @fight.save
 
-          debugger
-          hulk = %w(STOMPED BEAT MAIMED CRUSHED DEVASTATED SMASHED).to_upper
+          hulk = %w(STOMPED BEAT MAIMED CRUSHED DEVASTATED SMASHED)
           if @fight.started_by_roll > @fight.opponent_roll
             @fight.started_by.increment!(:wins)
             @fight.opponent.increment!(:losses)
