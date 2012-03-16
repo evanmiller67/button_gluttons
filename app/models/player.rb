@@ -11,7 +11,8 @@ class Player < ActiveRecord::Base
   class << self
     def active;     where(:active => true); end
     def registered; where(:is_registered => true); end
-    def winners;    where(:is_boss => false).registered.order("wins desc").limit(10); end
+    def winners;    where(:is_boss => false).registered.order("wins desc").limit(5); end
+    def bosses;     where(:is_boss => true).registered.order("wins desc").limit(5); end
     # def fights; joins(:fights); end
     # def opponents; where(:ajfljkajsfasjflj); end
   end

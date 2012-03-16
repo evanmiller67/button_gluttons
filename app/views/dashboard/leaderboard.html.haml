@@ -13,6 +13,7 @@
             %th Losses
             %th Ties
         %tbody
+          %legend Players
           - @players.each_with_index do |p, index|
             %tr
               %td #{index+1}
@@ -24,6 +25,18 @@
               %td #{p.losses}
               %td #{p.ties}
 
+        %tbody
+          %legend Bosses
+          - @bosses.each_with_index do |p, index|
+            %tr
+              %td #{index+1}
+              %td.name
+                = gravatar_image_tag(p.email_address, :alt => p.full_name, :gravatar => {:size => 25})
+                %strong #{p.full_name}
+
+              %td #{p.wins}
+              %td #{p.losses}
+              %td #{p.ties}
 
   .span6
     %section#twitter
