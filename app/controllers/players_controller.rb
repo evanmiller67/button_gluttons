@@ -55,14 +55,18 @@ class PlayersController < ApplicationController
           @fight.save
 
           hulk = %w(STOMPED beat Maimed *CRUSHED* *!*DEVASTATED*!* Felled Smote SMASHED! Trounced Fragged Burninated Asploded Splatted Flattened Assassinated DECIMATED!)
-          if @fight.started_by_roll > @fight.opponent_roll
+          if @fight.started_by_roll == @fight.opponent_roll
+            @fight.started_by.increment!(:ties)
+            @fight.opponent.increment!(:ties)
+            Twitter.update "#{@fight.started_by.first_name} and #{@fight.opponent.first_name} tied in Button Gluttons. #buttongluttons #codepalousa #CPL12"
+          elsif @fight.started_by_roll > @fight.opponent_roll
             @fight.started_by.increment!(:wins)
             @fight.opponent.increment!(:losses)
-            Twitter.update "#{@fight.started_by.first_name} just #{hulk.sample} #{@fight.opponent.first_name} in Button Gluttons! #buttongluttons #codepalousa #CPL12"
+            Twitter.update "#{@fight.started_by.first_name} #{hulk.sample} #{@fight.opponent.first_name} in Button Gluttons! #buttongluttons #codepalousa #CPL12"
           else
             @fight.started_by.increment!(:losses)
             @fight.opponent.increment!(:wins)
-            Twitter.update "#{@fight.opponent.first_name} just #{hulk.sample} #{@fight.started_by.first_name} in Button Gluttons! #buttongluttons #codepalousa #CPL12"
+            Twitter.update "#{@fight.opponent.first_name} #{hulk.sample} #{@fight.started_by.first_name} in Button Gluttons! #buttongluttons #codepalousa #CPL12"
           end
         end
       end

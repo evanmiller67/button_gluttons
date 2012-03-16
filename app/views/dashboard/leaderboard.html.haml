@@ -8,6 +8,7 @@
             %th Player
             %th Wins
             %th Losses
+            %th Ties
         %tbody
           %h2 Players
           - @players.each_with_index do |p, index|
@@ -19,6 +20,7 @@
 
               %td #{p.wins}
               %td #{p.losses}
+              %td #{p.ties}
 
       %table.table.table-striped.table-bordered
         %thead
@@ -27,6 +29,7 @@
             %th Player
             %th Wins
             %th Losses
+            %th Ties
         %tbody
           %h2 Bosses
           - @bosses.each_with_index do |p, index|
@@ -38,6 +41,7 @@
 
               %td #{p.wins}
               %td #{p.losses}
+              %td #{p.ties}
 
   .span6
     %section#twitter
