@@ -1,6 +1,18 @@
-= form_for @fight do |f|
-  
-  =f.submit
+.page-header
+  .row
+    .pull-right #{gravatar_image_tag(@player.email_address, :gravatar => {:size => 60})}
+    %h2 #{@player.full_name}
+  .row
+    #{image_tag("buttons/#{@fight.score(@player)}L.jpg", :class => "hidden player weapon cache")}
+    .pull-left #{image_tag("buttons/animated_L.gif", :height => 80, :width => 80, :class => "weapon player" )}
+    .score.player.hidden #{@player_score}
 
-
-= debug @fight
+.page-header
+  .row  
+    .pull-left #{gravatar_image_tag(@opponent.email_address, :gravatar => {:size => 40})}
+    .pull-right 
+      %h3 #{@opponent.full_name}
+  .row
+    .weapon.opponent.pull-right #{image_tag("buttons/#{@fight.score(@opponent)}R.jpg", :height => 80, :width => 80 )}
+    - if @opponent_score.to_i > 0
+      .score.opponent.pull-right #{ @opponent_score }

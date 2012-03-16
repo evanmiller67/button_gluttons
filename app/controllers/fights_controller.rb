@@ -8,8 +8,14 @@ class FightsController < ApplicationController
   end
 
   def show
-    @fight = Fight.find(params[:id])
-    @round = @fight.rounds.last
+    @fight    = Fight.find(params[:id])
+    @player   = Player.find(cookies[:player_id].to_i)
+    @opponent = @fight.started_by_id == @player.id ? 
+                  Player.find(@fight.opponent_id) : 
+                  Player.find(@fight.started_by_id)
+
+    @player_score   = @fight.score(@player)
+    @opponent_score = @fight.score(@opponent)
 
     respond_to do |format|
       format.html

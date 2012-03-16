@@ -10,4 +10,7 @@ class Fight < ActiveRecord::Base
     def inactive;   where(:active => false); end
   end
 
+  def score(player)
+    "%02d" % (started_by_id == player.id ? started_by_roll : opponent_roll)
+  end
 end

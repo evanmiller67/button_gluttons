@@ -73,7 +73,7 @@ class PlayersController < ApplicationController
   end
 
   def update
-    if @player.is_registered? && params[:player][:email_address] != @player.email_address
+    if @player.is_registered? && !params[:player][:email_address].casecmp(@player.email_address)
         redirect_to :root, alert: "Device not registered.  Are you sure you own this account?"
     else
       cookies[:player_id] = @player.id
