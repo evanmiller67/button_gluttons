@@ -6,14 +6,14 @@ showscore = ->
   $('.score.player').removeClass('hidden')
   $('.weapon.player').attr('src', $('.player.weapon.cache').attr('src'))
 
-showbanner = ->
+showwinner = ->
   unless $('.winlose.graphic').data("status") == ""
-    $('#winlose').modal('show')
+    $('#winlose').slideDown();
 
-`$('#winlose').on('hidden', function () {
-  window.location = "http://buttongluttons.com/leaderboard";
-  return false;
-})`
+redirectpage = ->
+  window.location = "http://buttongluttons.com/leaderboard"
+  return false
 
 setTimeout showscore, 3000
-setTimeout showbanner, 3500
+setTimeout showwinner, 3500
+setTimeout redirectpage, 6000

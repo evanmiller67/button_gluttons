@@ -1,4 +1,6 @@
 #{image_tag("buttons/#{@fight.score(@player)}L.jpg", :class => "hidden player weapon cache")}
+#winlose
+  #{image_tag("#{@winlose}.png", :class => "winlose graphic", "data-status" => @winlose) if @winlose.size > 0 }
 
 .page-header
   .row
@@ -17,11 +19,3 @@
     .weapon.opponent.pull-right #{image_tag("buttons/#{@fight.score(@opponent)}R.jpg", :height => 80, :width => 80 )}
     - if @opponent_score.to_i > 0
       .score.opponent.pull-right #{ @opponent_score }
-
-
-#winlose.modal.fade{:style => "display: none;"}
-
-  .modal-body
-    %a.close{"data-dismiss" => "modal"}x
-    .thumbnail
-      #{image_tag("#{@winlose}.png", :class => "winlose graphic", "data-status" => @winlose)} if @winlose.size > 0
