@@ -45,12 +45,12 @@ class PlayersController < ApplicationController
           debugger
           hulk = %w(STOMPED BEAT MAIMED CRUSHED DEVASTATED SMASHED).to_upper
           if @fight.started_by_roll > @fight.opponent_roll
-            @fight.started_by.increment(:wins)
-            @fight.opponent.increment(:losses)
+            @fight.started_by.increment!(:wins)
+            @fight.opponent.increment!(:losses)
             Twitter.update "#{@fight.started_by.full_name} just #{hulk.sample} #{@fight.opponent.full_name} in Button Gluttons!"
           else
-            @fight.started_by.increment(:losses)
-            @fight.opponent.increment(:wins)
+            @fight.started_by.increment!(:losses)
+            @fight.opponent.increment!(:wins)
             Twitter.update "#{@fight.opponent.full_name} just #{hulk.sample} #{@fight.started_by.full_name} in Button Gluttons!"
           end
         end
