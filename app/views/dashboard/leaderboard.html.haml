@@ -39,7 +39,7 @@
                 = gravatar_image_tag(p.email_address, :alt => p.full_name, :gravatar => {:size => 25})
                 %strong #{p.full_name}
 
-              %td #{p.wins}
+              %td #{p.id == 6915719610 ? "Over 9,000!" : p.wins}
               %td #{p.losses}
               %td #{p.ties}
 
