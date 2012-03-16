@@ -6,4 +6,10 @@ showscore = () ->
   $('.score.player').removeClass('hidden')
   $('.weapon.player').attr('src', $('.player.weapon.cache').attr('src'))
 
-setTimeout showscore, 4000
+showbanner = () ->
+  # banner = $('#banner').attr('data')
+  # $('.banner).attr('src', '$('#banner').attr('data'))
+  $('#myModal').modal('show')
+
+setTimeout showscore, 1000
+setTimeout showbanner, 1500

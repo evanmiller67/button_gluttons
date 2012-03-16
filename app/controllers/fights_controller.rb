@@ -16,6 +16,7 @@ class FightsController < ApplicationController
 
     @player_score   = @fight.score(@player)
     @opponent_score = @fight.score(@opponent)
+    @banner         = "lose"
 
     respond_to do |format|
       format.html

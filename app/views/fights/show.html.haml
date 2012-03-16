@@ -1,9 +1,10 @@
+#{image_tag("buttons/#{@fight.score(@player)}L.jpg", :class => "hidden player weapon cache")}
+
 .page-header
   .row
     .pull-right #{gravatar_image_tag(@player.email_address, :gravatar => {:size => 60})}
     %h2 #{@player.full_name}
   .row
-    #{image_tag("buttons/#{@fight.score(@player)}L.jpg", :class => "hidden player weapon cache")}
     .pull-left #{image_tag("buttons/animated_L.gif", :height => 80, :width => 80, :class => "weapon player" )}
     .score.player.hidden #{@player_score}
 
@@ -16,3 +17,13 @@
     .weapon.opponent.pull-right #{image_tag("buttons/#{@fight.score(@opponent)}R.jpg", :height => 80, :width => 80 )}
     - if @opponent_score.to_i > 0
       .score.opponent.pull-right #{ @opponent_score }
+
+
+#myModal.modal.fade{:style => "display: none;"}
+
+  .modal-body
+    %a.close{"data-dismiss" => "modal"}x
+    #banner.hidden{:data => @banner}
+    .span5
+      .thumbnail
+        #{image_tag("win.gif", :class => "banner !important", :height => "400px")}
