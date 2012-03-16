@@ -17,7 +17,7 @@
             %tr
               %td #{index+1}
               %td.name
-                =gravatar_image_tag(p.email_address, :alt => p.full_name, :gravatar => {:size => 25})
+                = gravatar_image_tag(p.email_address, :alt => p.full_name, :gravatar => {:size => 25})
                 %strong #{p.full_name}
 
               %td #{p.wins}
