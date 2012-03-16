@@ -1,23 +1,21 @@
-%form.form-horizontal
-    
-  %fieldset
-    %legend
-      Player Info
-      .pull-right
-        =gravatar_image_tag(@player.email_address, :alt => @player.full_name)
+.pull-right
+  =gravatar_image_tag(@player.email_address)
 
-    .control-group
-      %label.control-label Name
-      .controls
-        %span.input-xlarge.uneditable-input 
-          =@player.full_name
+.page-header
+  %h1
+    =@player.full_name
+  %h2
+    (#{@player.email_address})
 
-    .control-group
-      %label.control-label Email
-      .controls
-        %span.input-xlarge.uneditable-input 
-          =@player.email_address 
+.page-header
+  %h1
+    %table.table.table-bordered
+      %tr
+        %td Wins:
+        %td #{@player.wins}
+      %tr
+        %td Losses:
+        %td #{@player.losses}
 
-    .form-actions
-      = link_to 'Edit', edit_player_path(@player), :class => "btn btn-large btn-primary"
-      = link_to 'Back', players_path, class: "btn btn-large btn-secondary"
+
+= link_to 'Edit Your Info', edit_player_path(@player), :class => "btn btn-large btn-primary"

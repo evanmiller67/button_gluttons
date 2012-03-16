@@ -1,6 +1,7 @@
 !!! 5
 %html{:lang => "en"}
   %head
+    %meta{:name => "author", :content => "CafePress"}
     %meta{:charset => "utf-8"}
     %title= content_for?(:title) ? yield(:title) : "ButtonGluttons"
     = csrf_meta_tags
@@ -12,9 +13,6 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
     %link{:href => image_path("favicon.ico"), :rel => "shortcut icon"}/
-    %link{:href => image_path("apple-touch-icon.png"), :rel => "apple-touch-icon"}/
-    %link{:href => image_path("apple-touch-icon-72x72.png"), :rel => "apple-touch-icon", :sizes => "72x72"}/
-    %link{:href => image_path("apple-touch-icon-114x114.png"), :rel => "apple-touch-icon", :sizes => "114x114"}/
 
   %body
     %header
@@ -27,7 +25,10 @@
         .span12
           = yield
     
-      %footer
-        %p &copy; CafePress, Inc. 2012
+    .footer
+      .footer-padding
+      .footer-rule
+      .footer-text
+        &copy; 2012 CafePress Inc.
 
     = javascript_include_tag "application"

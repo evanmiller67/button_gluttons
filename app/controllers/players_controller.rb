@@ -41,6 +41,12 @@ class PlayersController < ApplicationController
           @fight.opponent_roll  = roll
           @fight.active         = false
           @fight.save
+
+          if @fight.started_by_roll > @fight.opponent_roll
+            Twitter.update("#{@fight.started_by.full_name} just stomped #{@opponent.full_name} in Button Gluttons!"
+          else
+            # Twitter.update("#{@player.full_name} just beat #{@opponent.full_name} in Button Gluttons!"
+          end
         end
       end
 
@@ -83,7 +89,7 @@ class PlayersController < ApplicationController
 
       respond_to do |format|
         if @player.update_attributes(params[:player])
-          Twitter.update("#{@player.full_name} just registered to play Button Gluttons! http://buttongluttons.com/") unless registered
+          Twitter.update("#{@player.full_name} just registered to play Button Gluttons! http://buttongluttons.com/ #buttongluttons #cafepress") unless registered
           format.html { redirect_to @player }
           format.json { head :no_content }
         else

@@ -3,7 +3,7 @@
 //= require twitter/jquery.juitter
 $.Juitter.start({
   searchType:"searchWord", // needed, you can use "searchWord", "fromUser", "toUser"
-  searchObject:"buttongluttons, codepalousa", // needed, you can insert a username here or a word to be searched for, if you wish multiple search, separate the words by comma.
+  searchObject:"buttongluttons,buttongluttons.com,codepalousa", 
 
   // The values below will overwrite the ones on the Juitter default configuration. 
   // They are optional here.
