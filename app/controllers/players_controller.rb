@@ -100,9 +100,9 @@ class PlayersController < ApplicationController
   def game_status
     @player = Player.find(params[:id])
 
-    unless @player.is_boss?
-      redirect_to :root, :notice => "Sorry, the game is closed right now.  Please try again later."
-      return false
-    end
+    # unless @player.is_boss?
+    #   redirect_to :root, :notice => "Sorry, the game is closed right now.  Please try again later."
+    #   return false
+    # end
   end
 end
