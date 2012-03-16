@@ -45,7 +45,7 @@ class PlayersController < ApplicationController
           )
 
         # Are we playing the ButtonGlutton Master!?
-        if @player.id == 555
+        if 555 == @player.id
           roll = rand(19)+1
           roll = roll + roll < 14 ? roll + 5 : 20
           @fight.opponent_roll = roll
