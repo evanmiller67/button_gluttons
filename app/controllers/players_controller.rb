@@ -42,11 +42,11 @@ class PlayersController < ApplicationController
           @fight.active         = false
           @fight.save
 
-          if @fight.started_by_roll > @fight.opponent_roll
-            Twitter.update("#{@fight.started_by.full_name} just stomped #{@opponent.full_name} in Button Gluttons!"
-          else
-            # Twitter.update("#{@player.full_name} just beat #{@opponent.full_name} in Button Gluttons!"
-          end
+          # if @fight.started_by_roll > @fight.opponent_roll
+          #   Twitter.update("#{@fight.started_by.full_name} just stomped #{@opponent.full_name} in Button Gluttons!"
+          # else
+          #   # Twitter.update("#{@player.full_name} just beat #{@opponent.full_name} in Button Gluttons!"
+          # end
         end
       end
 
