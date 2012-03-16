@@ -42,17 +42,19 @@ class PlayersController < ApplicationController
           @fight.active         = false
           @fight.save
 
-          # if @fight.started_by_roll > @fight.opponent_roll
-          #   Twitter.update("#{@fight.started_by.full_name} just stomped #{@opponent.full_name} in Button Gluttons!"
-          # else
-          #   # Twitter.update("#{@player.full_name} just beat #{@opponent.full_name} in Button Gluttons!"
-          # end
+          debugger
+          hulk = %w(STOMPED BEAT MAIMED CRUSHED DEVASTATED SMASHED).to_upper
+          if @fight.started_by_roll > @fight.opponent_roll
+            @fight.started_by.increment(:wins)
+            @fight.opponent.increment(:losses)
+            Twitter.update "#{@fight.started_by.full_name} just #{hulk.sample} #{@fight.opponent.full_name} in Button Gluttons!"
+          else
+            @fight.started_by.increment(:losses)
+            @fight.opponent.increment(:wins)
+            Twitter.update "#{@fight.opponent.full_name} just #{hulk.sample} #{@fight.started_by.full_name} in Button Gluttons!"
+          end
         end
       end
-
-      # Is this player already in a fight?
-      # @fight = Fight.where("started_by_id = :started_by AND status = 'i'", {:started_by => @player.id}).first
-      # @fight = Fight.where("started_by_id = ? OR opponent_id = ?", @player, @player)
 
       redirect_to @fight
 
